@@ -5,448 +5,92 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Professional lawn care services for residential and commercial customers. Quality lawn maintenance, landscaping, and garden care.">
-    <title>TNT LawnCare - Professional Lawn Care Services</title>
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap"
-        rel="stylesheet">
-
-    <!-- Remix Icon CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
-
-    <!-- AOS Library -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
-    <!-- Custom CSS -->
+        content="Professional lawn care services including mowing, weedeating, mulching, and edging for local homeowners.">
+    <title>TNT Lawn Care</title>
+    <!-- Styles CSS -->
     <link rel="stylesheet" href="css/styles.css">
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Remix Icons CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
 </head>
 
-<body class="light-mode">
+<body>
+
     <!-- Progress Bar -->
-    <div class="progress-container">
+    <div class="progress-contaniner">
         <div class="progress-bar" id="progressBar"></div>
     </div>
 
-    <!-- Header -->
-    <header class="header">
+    <!-- Header & Navigation -->
+    <header>
         <div class="container">
+            <!-- Logo -->
             <div class="logo">
-                <h1>T<span>N</span>T.</h1>
+                <a href="#hero">T<span>N</span>T Lawns<span>.</span></a>
             </div>
-
+            <!-- Desktop Nav -->
             <nav class="desktop-nav">
                 <ul>
-                    <li><a href="#home" class="active">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <!-- <li><a href="#pricing">Pricing</a></li> -->
-                    <li><a href="#gallery">Gallery</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#hero" class="nav-link active">Home</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+                    <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
                 </ul>
+                <a href="#contact" class="cta-button">Get a Quote!</a>
             </nav>
 
-            <div class="header-right">
-                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">
-                    <i class="ri-sun-line light-icon"></i>
-                    <i class="ri-moon-line dark-icon"></i>
+            <!-- Theme Toggle -->
+            <div class="theme-toggle">
+                <!-- Light Button -->
+                <button id="lightModeToggle" class="theme-btn" aria-label="Switch to light mode">
+                    <i class="ri-sun-line"></i>
                 </button>
-                <a href="#contact" class="btn btn-primary">Lets Talk!</a>
-                <button class="hamburger" id="hamburgerBtn" aria-label="Menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                <!-- Dark Button -->
+                <button id="darkModeToggle" class="theme-btn" aria-label="Switch to dark mode">
+                    <i class="ri-moon-line"></i>
                 </button>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <div class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </div>
     </header>
 
-    <!-- Mobile Navigation -->
-    <div class="mobile-nav" id="mobileNav">
-        <div class="mobile-nav-container">
-            <div class="mobile-nav-logo">
-                <img src="Images/tntLogo.png" alt="">
-            </div>
-            <ul>
-                <li><a href="#home" class="mobile-nav-link">Home</a></li>
-                <li><a href="#about" class="mobile-nav-link">About</a></li>
-                <li><a href="#services" class="mobile-nav-link">Services</a></li>
-                <!-- <li><a href="#pricing" class="mobile-nav-link">Pricing</a></li> -->
-                <li><a href="#gallery" class="mobile-nav-link">Gallery</a></li>
-                <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
-            </ul>
-            <div class="mobile-contact">
-                <p><i class="ri-phone-line"></i> (555) 123-4567</p>
-                <p><i class="ri-mail-line"></i> info@greenscapepro.com</p>
-            </div>
-        </div>
-    </div>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-content" data-aos="fade-right" data-aos-duration="1000">
-                <h2>Professional Lawn Care Services for Your Home & Business</h2>
-                <p>Transform your outdoor space with our expert lawn maintenance, landscaping, and garden care services.
-                    We deliver quality results that make your property stand out.</p>
-                <div class="hero-buttons">
-                    <a href="#contact" class="btn btn-primary">Get a Free Quote</a>
-                    <a href="#services" class="btn btn-secondary">Our Services</a>
-                </div>
-            </div>
-            <div class="hero-image" data-aos="fade-left" data-aos-duration="1000">
-                <img src="https://placehold.co/600x400/72B01D/FFFFFF?text=Professional+Lawn+Care"
-                    alt="Professional lawn care service" loading="lazy">
-            </div>
-        </div>
-    </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <h2>About T<span>N</span>T.</h2>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-            </div>
 
-            <div class="about-content">
-                <div class="about-image" data-aos="fade-right">
-                    <img src="https://placehold.co/500x400/3F7D20/FFFFFF?text=Our+Team" alt="GreenScape Pro team"
-                        loading="lazy">
-                </div>
-                <div class="about-text" data-aos="fade-left">
-                    <h3>Why Choose Me?</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit quos veritatis officia distinctio repellat reprehenderit porro eaque autem blanditiis! Eligendi.</p>
 
-                    <!-- <div class="about-features">
-                        <div class="feature">
-                            <i class="ri-shield-check-line"></i>
-                            <div>
-                                <h4>Certified Experts</h4>
-                                <p>Our team consists of certified lawn care professionals with years of experience.</p>
-                            </div>
-                        </div>
-                        <div class="feature">
-                            <i class="ri-recycle-line"></i>
-                            <div>
-                                <h4>Eco-Friendly Practices</h4>
-                                <p>We use sustainable methods and environmentally friendly products.</p>
-                            </div>
-                        </div>
-                        <div class="feature">
-                            <i class="ri-customer-service-2-line"></i>
-                            <div>
-                                <h4>Exceptional Service</h4>
-                                <p>We pride ourselves on reliability, attention to detail, and customer satisfaction.
-                                </p>
-                            </div>
-                        </div>
-                    </div> -->
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Services Section -->
-    <section id="services" class="services">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <h2>My Services</h2>
-                <p>Lorem ipsum dolor sit.</p>
-            </div>
 
-            <div class="services-grid">
-                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="service-icon">
-                        <i class="ri-scissors-cut-line"></i>
-                    </div>
-                    <h3>Lawn Mowing</h3>
-                    <p>Lorem ipsum dolor sit.</p>
-                </div>
 
-                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="service-icon">
-                        <i class="ri-plant-line"></i>
-                    </div>
-                    <h3>Weedeating</h3>
-                    <p>Lorem ipsum dolor sit.</p>
-                </div>
 
-                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="service-icon">
-                        <i class="ri-leaf-line"></i>
-                    </div>
-                    <h3>Edging</h3>
-                    <p>Lorem ipsum dolor sit.</p>
-                </div>
 
-                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="service-icon">
-                        <i class="ri-leaf-line"></i>
-                    </div>
-                    <h3>Clean-Up</h3>
-                    <p>Lorem ipsum dolor sit.</p>
-                </div>
 
-                
-            </div>
-        </div>
-    </section>
 
-    <!-- Pricing Section -->
-    <!-- <section id="pricing" class="pricing">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <h2>Our Pricing</h2>
-                <p>Transparent and competitive pricing for all services</p>
-            </div>
 
-            <div class="pricing-grid">
-                <div class="pricing-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="pricing-header">
-                        <h3>Basic</h3>
-                        <p class="price">$99<span>/month</span></p>
-                    </div>
-                    <div class="pricing-body">
-                        <ul>
-                            <li><i class="ri-check-line"></i> Bi-weekly lawn mowing</li>
-                            <li><i class="ri-check-line"></i> Edge trimming</li>
-                            <li><i class="ri-check-line"></i> Blowing of walkways</li>
-                            <li><i class="ri-close-line"></i> Fertilization</li>
-                            <li><i class="ri-close-line"></i> Seasonal cleanup</li>
-                            <li><i class="ri-close-line"></i> Garden care</li>
-                        </ul>
-                    </div>
-                    <div class="pricing-footer">
-                        <a href="#contact" class="btn btn-secondary">Get Started</a>
-                    </div>
-                </div>
 
-                <div class="pricing-card featured" data-aos="fade-up" data-aos-delay="200">
-                    <div class="pricing-badge">Popular</div>
-                    <div class="pricing-header">
-                        <h3>Standard</h3>
-                        <p class="price">$179<span>/month</span></p>
-                    </div>
-                    <div class="pricing-body">
-                        <ul>
-                            <li><i class="ri-check-line"></i> Weekly lawn mowing</li>
-                            <li><i class="ri-check-line"></i> Edge trimming</li>
-                            <li><i class="ri-check-line"></i> Blowing of walkways</li>
-                            <li><i class="ri-check-line"></i> Quarterly fertilization</li>
-                            <li><i class="ri-check-line"></i> Seasonal cleanup</li>
-                            <li><i class="ri-close-line"></i> Garden care</li>
-                        </ul>
-                    </div>
-                    <div class="pricing-footer">
-                        <a href="#contact" class="btn btn-primary">Get Started</a>
-                    </div>
-                </div>
-
-                <div class="pricing-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="pricing-header">
-                        <h3>Premium</h3>
-                        <p class="price">$299<span>/month</span></p>
-                    </div>
-                    <div class="pricing-body">
-                        <ul>
-                            <li><i class="ri-check-line"></i> Weekly lawn mowing</li>
-                            <li><i class="ri-check-line"></i> Edge trimming</li>
-                            <li><i class="ri-check-line"></i> Blowing of walkways</li>
-                            <li><i class="ri-check-line"></i> Monthly fertilization</li>
-                            <li><i class="ri-check-line"></i> Seasonal cleanup</li>
-                            <li><i class="ri-check-line"></i> Garden care & maintenance</li>
-                        </ul>
-                    </div>
-                    <div class="pricing-footer">
-                        <a href="#contact" class="btn btn-secondary">Get Started</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="pricing-note" data-aos="fade-up">
-                <p><i class="ri-information-line"></i> Custom pricing available for commercial properties. <a
-                        href="#contact">Contact us</a> for a personalized quote.</p>
-            </div>
-        </div>
-    </section> -->
-
-    <!-- Gallery Section -->
-    <section id="gallery" class="gallery">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <h2>Before & After Gallery</h2>
-                <p>See the transformation I can bring to your property</p>
-            </div>
-
-            <div class="gallery-grid">
-                <div class="before-after-container" data-aos="fade-up" data-aos-delay="100">
-                    <div class="before-after-slider">
-                        <div class="before-image">
-                            <img src="Images/field.jpg"
-                                alt="Before lawn maintenance" loading="lazy">
-                        </div>
-                        <div class="after-image">
-                            <img src="Images/lawn.jpg"
-                                alt="After lawn maintenance" loading="lazy">
-                        </div>
-                        <div class="slider-handle">
-                            <i class="ri-arrow-left-right-line"></i>
-                        </div>
-                    </div>
-                    <p>Lorem, ipsum dolor.</p>
-                </div>
-
-                <div class="before-after-container" data-aos="fade-up" data-aos-delay="200">
-                    <div class="before-after-slider">
-                        <div class="before-image">
-                            <img src="https://placehold.co/600x400/454955/FFFFFF?text=Before" alt="Before garden care"
-                                loading="lazy">
-                        </div>
-                        <div class="after-image">
-                            <img src="https://placehold.co/600x400/72B01D/FFFFFF?text=After" alt="After garden care"
-                                loading="lazy">
-                        </div>
-                        <div class="slider-handle">
-                            <i class="ri-arrow-left-right-line"></i>
-                        </div>
-                    </div>
-                    <p>Lorem, ipsum dolor.</p>
-                </div>
-
-                <div class="before-after-container" data-aos="fade-up" data-aos-delay="300">
-                    <div class="before-after-slider">
-                        <div class="before-image">
-                            <img src="https://placehold.co/600x400/454955/FFFFFF?text=Before"
-                                alt="Before hedge trimming" loading="lazy">
-                        </div>
-                        <div class="after-image">
-                            <img src="https://placehold.co/600x400/72B01D/FFFFFF?text=After" alt="After hedge trimming"
-                                loading="lazy">
-                        </div>
-                        <div class="slider-handle">
-                            <i class="ri-arrow-left-right-line"></i>
-                        </div>
-                    </div>
-                    <p>Lorem, ipsum dolor.</p>
-                </div>
-
-                <div class="before-after-container" data-aos="fade-up" data-aos-delay="400">
-                    <div class="before-after-slider">
-                        <div class="before-image">
-                            <img src="https://placehold.co/600x400/454955/FFFFFF?text=Before"
-                                alt="Before commercial landscaping" loading="lazy">
-                        </div>
-                        <div class="after-image">
-                            <img src="https://placehold.co/600x400/72B01D/FFFFFF?text=After"
-                                alt="After commercial landscaping" loading="lazy">
-                        </div>
-                        <div class="slider-handle">
-                            <i class="ri-arrow-left-right-line"></i>
-                        </div>
-                    </div>
-                    <p>Lorem, ipsum dolor.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <h2>Contact Me</h2>
-                <p>Get in touch for a free consultation and quote</p>
-            </div>
-
-            <div class="contact-content">
-                <div class="contact-info" data-aos="fade-right">
-                    <div class="contact-card">
-                        <i class="ri-phone-line"></i>
-                        <h3>Call Me</h3>
-                        <p><a href="tel:+15019461922">(501) 946-1922</a></p>
-                    </div>
-
-                    <div class="contact-card">
-                        <i class="ri-mail-line"></i>
-                        <h3>Email Me</h3>
-                        <p><a href="mailto:tntlawns23@gmail.com">tntlawns23@gmail.com</a></p>
-                    </div>
-
-                    <div class="contact-card">
-                        <i class="ri-map-pin-line"></i>
-                        <h3>Service Area</h3>
-                        <p>Central Arkansas and surrounding areas within 25 miles</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <h2>T<span>N</span>T.</h2>
-                    <p>Lawn care services you can trust.</p>
-                </div>
-
-                <div class="footer-links">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#pricing">Pricing</a></li>
-                        <li><a href="#gallery">Gallery</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-services">
-                    <h3>My Services</h3>
-                    <ul>
-                        <li>Lawn Mowing</li>
-                        <li>Weedeating</li>
-                        <li>Edging</li>
-                        <li>Clean-Up</li>
-                    </ul>
-                </div>
-
-                <div class="footer-contact">
-                    <h3>Contact Info</h3>
-                    <p><i class="ri-map-pin-line"></i>Saline County, AR</p>
-                    <p><i class="ri-phone-line"></i> (501) 946-1922</p>
-                    <p><i class="ri-mail-line"></i></p>
-                </div>
-            </div>
-
-            <div class="footer-bottom">
-                <p>&copy; 2025 TNT LawnCare. All rights reserved.</p>
-                <div class="footer-bottom-links">
-                    <!-- <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Service</a> -->
-                </div>
-            </div>
-        </div>
-    </footer>
 
     <!-- Scroll to Top Button -->
-    <button id="scrollToTop" class="scroll-to-top" aria-label="Scroll to top">
+    <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Scroll to top">
         <i class="ri-arrow-up-line"></i>
     </button>
 
-
-    <!-- AOS Library -->
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-
     <!-- Scripts -->
-    <script src="js/before-after.js"></script>
-    <script src="js/main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="main.js"></script>
+    <script src="progress-bar.js"></script>
+    <script src="scroll-top.js"></script>
+    <script src="animations.js"></script>
+    <script src="image-slider.js"></script>
+    <script src="theme-toggle.js"></script>
+    <script src="navigation.js"></script>
 </body>
 
 </html>
