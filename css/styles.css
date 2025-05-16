@@ -16,14 +16,14 @@ Root Variables
     --white: #ffffff;
 
     /* Theme-specific colors */
-    --background-primary: var(--ego-white);
-    --background-secondary: var(--ego-light-gray);
-    --text-primary: var(--ego-black);
-    --text-secondary: var(--ego-dark-gray);
-    --accent-color: var(--ego-green);
-    --accent-bright: var(--ego-bright-green);
+    --background-primary: var(--white);
+    --background-secondary: var(--light-gray);
+    --text-primary: var(--black);
+    --text-secondary: var(--dark-gray);
+    --accent-color: var(--green);
+    --accent-bright: var(--bright-green);
     --border-color: #e0e0e0;
-    --card-bg: var(--ego-white);
+    --card-bg: var(--white);
     --shadow-color: rgba(0, 0, 0, 0.1);
     --overlay-bg: rgba(255, 255, 255, 0.9);
 
@@ -388,6 +388,21 @@ header .container {
     transform: translateY(-2px);
 }
 
+/* ==================== 
+Hero Section
+==================== */
+.hero-section {
+    padding-top: 150px;
+    padding-bottom: 80px;
+    background-color: var(--background-primary);
+}
+
+.hero-section .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
 
 
 
