@@ -13,12 +13,17 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Remix Icons CSS -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Gudea:ital,wght@0,400;0,700;1,400&family=Moirai+One&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
 
     <!-- Progress Bar -->
-    <div class="progress-contaniner">
+    <div class="progress-container">
         <div class="progress-bar" id="progressBar"></div>
     </div>
 
@@ -27,7 +32,7 @@
         <div class="container">
             <!-- Logo -->
             <div class="logo">
-                <a href="#hero">T<span>N</span>T Lawns<span>.</span></a>
+                <a href="#hero">TNT LAWNS</a>
             </div>
             <!-- Desktop Nav -->
             <nav class="desktop-nav">
@@ -39,310 +44,30 @@
                     <li><a href="#gallery" class="nav-link">Gallery</a></li>
                     <li><a href="#contact" class="nav-link">Contact</a></li>
                 </ul>
+                <!-- CTA Button -->
                 <a href="#contact" class="cta-button">Get a Quote!</a>
             </nav>
-
-            <!-- Theme Toggle -->
-            <div class="theme-toggle">
-                <!-- Light Button -->
-                <button id="lightModeToggle" class="theme-btn" aria-label="Switch to light mode">
-                    <i class="ri-sun-line"></i>
-                </button>
-                <!-- Dark Button -->
-                <button id="darkModeToggle" class="theme-btn" aria-label="Switch to dark mode">
-                    <i class="ri-moon-line"></i>
-                </button>
-            </div>
-
             <!-- Mobile Menu Toggle -->
-            <div class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+            <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
                 <span></span>
                 <span></span>
                 <span></span>
-            </div>
+            </button>
         </div>
     </header>
 
-    <!-- Mobile Navigation Overlay -->
-    <div class="mobile-nav-overlay">
-        <!-- Close Menu -->
-        <button class="close-menu" aria-label="Close menu">
-            <i class="ri-close-line"></i>
-        </button>
 
-        <nav class="mobile-nav">
-            <ul>
-                <li><a href="#hero" class="mobile-nav-link">Home</a></li>
-                <li><a href="#services" class="mobile-nav-link">Services</a></li>
-                <li><a href="#about" class="mobile-nav-link">About</a></li>
-                <li><a href="#testimonials" class="mobile-nav-link">Testimonials</a></li>
-                <li><a href="#gallery" class="mobile-nav-link">Gallery</a></li>
-                <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
 
-    <!-- Main Content -->
-    <main>
-        <!-- Hero Section -->
-        <section id="hero" class="hero-section">
-            <div class="container">
-                <!-- Hero Content -->
-                <div class="hero-content" data-aos="fade-right" data-aos-duration="1000">
-                    <h1>Professional Lawn Care Services</h1>
-                    <p>Transforming yards with quality, reliable service at affordable rates. Your lawn deserves the
-                        best care.</p>
-                    <a href="#contact" class="cta-button">Get a Quote!</a>
-                </div>
-                <!-- Hero Image -->
-                <div class="hero-image" data-aos="fade-left" data-aos-duration="1000">
-                    <img src="" alt="">
-                </div>
-            </div>
-        </section>
 
-        <!-- Services Section -->
-        <section id="services" class="services-section">
-            <div class="container">
-                <h2 data-aos="fade-up">My Services</h2>
-                <div class="services-grid">
-                    <div class="service-card" data-aos="fade-up" data-aos-delay="100">
-                        <div class="service-icon">
-                            <i class="ri-scissors-cut-line"></i>
-                        </div>
-                        <h3>Lawn Mowing</h3>
-                        <p>Professional mowing with clean edges and proper grass height for a healthy, beautiful lawn.
-                        </p>
-                    </div>
-                    <div class="service-card" data-aos="fade-up" data-aos-delay="200">
-                        <div class="service-icon">
-                            <i class="ri-plant-line"></i>
-                        </div>
-                        <h3>Weedeating</h3>
-                        <p>Precise trimming around obstacles, fences, and hard-to-reach areas for a complete, polished
-                            look.</p>
-                    </div>
-                    <div class="service-card" data-aos="fade-up" data-aos-delay="300">
-                        <div class="service-icon">
-                            <i class="ri-leaf-line"></i>
-                        </div>
-                        <h3>Mulching</h3>
-                        <p>Quality mulch application to enhance soil health, reduce weeds, and beautify your garden
-                            beds.</p>
-                    </div>
-                    <div class="service-card" data-aos="fade-up" data-aos-delay="400">
-                        <div class="service-icon">
-                            <i class="ri-ruler-line"></i>
-                        </div>
-                        <h3>Edging</h3>
-                        <p>Sharp, clean edges along driveways, walkways, and garden beds for a professionally manicured
-                            appearance.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <!-- About Section -->
-        <section id="about" class="about-section">
-            <div class="container">
-                <!-- About Content -->
-                <div class="about-content">
-                    <div class="about-image" data-aos="fade-right">
-                        <img src="" alt="">
-                    </div>
 
-                    <!-- About Text -->
-                    <div class="about-text" data-aos="fade-left">
-                        <h2>About Truett</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias vel autem dignissimos quas
-                            aspernatur unde.</p>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus veniam sunt,
-                            voluptatum saepe eaque et.</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, eius? Repellendus
-                            reprehenderit iusto ducimus similique blanditiis nulla, officia ut, modi illo minus minima
-                            vel quis.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <!-- Testimonial Section -->
-        <section id="testimonials" class="testimonials-section">
 
-        </section>
 
-        <!-- Gallery Section -->
-        <section id="gallery" class="gallery-section">
-            <div class="container">
-                <h2 data-aos="fade-up">Before & After Gallery</h2>
-                <div class="gallery-grid">
-                    <!-- Slider wrapper 1 -->
-                    <div class="comparison-slider-wrapper" data-aos="fade-up" data-aos-delay="100">
-                        <div class="comparison-slider">
-                            <div class="before-image">
-                                <img src="/placeholder.svg?height=300&width=500" alt="Before lawn service" width="500"
-                                    height="300">
-                                <span class="label">Before</span>
-                            </div>
-                            <div class="after-image">
-                                <img src="/placeholder.svg?height=300&width=500" alt="After lawn service" width="500"
-                                    height="300">
-                                <span class="label">After</span>
-                            </div>
-                            <div class="slider-handle">
-                                <span class="handle-line"></span>
-                                <span class="handle-circle"></span>
-                                <span class="handle-line"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Slider wrapper 2 -->
-                    <div class="comparison-slider-wrapper" data-aos="fade-up" data-aos-delay="200">
-                        <div class="comparison-slider">
-                            <div class="before-image">
-                                <img src="/placeholder.svg?height=300&width=500" alt="Before edging service" width="500"
-                                    height="300">
-                                <span class="label">Before</span>
-                            </div>
-                            <div class="after-image">
-                                <img src="/placeholder.svg?height=300&width=500" alt="After edging service" width="500"
-                                    height="300">
-                                <span class="label">After</span>
-                            </div>
-                            <div class="slider-handle">
-                                <span class="handle-line"></span>
-                                <span class="handle-circle"></span>
-                                <span class="handle-line"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Slider wrapper 3 -->
-                    <div class="comparison-slider-wrapper" data-aos="fade-up" data-aos-delay="200">
-                        <div class="comparison-slider">
-                            <div class="before-image">
-                                <img src="/placeholder.svg?height=300&width=500" alt="Before edging service" width="500"
-                                    height="300">
-                                <span class="label">Before</span>
-                            </div>
-                            <div class="after-image">
-                                <img src="/placeholder.svg?height=300&width=500" alt="After edging service" width="500"
-                                    height="300">
-                                <span class="label">After</span>
-                            </div>
-                            <div class="slider-handle">
-                                <span class="handle-line"></span>
-                                <span class="handle-circle"></span>
-                                <span class="handle-line"></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="contact-section">
-            <div class="container">
-                <h2 data-aos="fade-up">Get In Touch</h2>
-                <div class="contact-content" data-aos="fade-up">
-                    <div class="contact-info">
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="ri-phone-line"></i>
-                            </div>
-                            <div>
-                                <h3>Phone</h3>
-                                <p><a href="tel:555-123-4567">555-123-4567</a></p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="ri-mail-line"></i>
-                            </div>
-                            <div>
-                                <h3>Email</h3>
-                                <p><a href="mailto:jake@jakeslawncare.com">jake@jakeslawncare.com</a></p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="ri-time-line"></i>
-                            </div>
-                            <div>
-                                <h3>Business Hours</h3>
-                                <p>Monday - Friday: 8:00 AM - 6:00 PM</p>
-                                <p>Saturday: 9:00 AM - 3:00 PM</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="ri-map-pin-line"></i>
-                            </div>
-                            <div>
-                                <h3>Service Area</h3>
-                                <p>Springfield and surrounding neighborhoods</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <h3>Jake's Lawn Care</h3>
-                    <p>Quality lawn care services for your home</p>
-                </div>
-                <div class="footer-links">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="#hero">Home</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#testimonials">Testimonials</a></li>
-                        <li><a href="#gallery">Gallery</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-social">
-                    <h4>Connect With Us</h4>
-                    <div class="social-icons">
-                        <a href="#" aria-label="Facebook">
-                            <i class="ri-facebook-fill"></i>
-                        </a>
-                        <a href="#" aria-label="Instagram">
-                            <i class="ri-instagram-line"></i>
-                        </a>
-                        <a href="#" aria-label="Twitter">
-                            <i class="ri-twitter-x-line"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Jake's Lawn Care. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Scroll to Top Button -->
-    <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Scroll to top">
-        <i class="ri-arrow-up-line"></i>
-    </button>
 
     <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="main.js"></script>
-    <script src="progress-bar.js"></script>
-    <script src="scroll-top.js"></script>
-    <script src="animations.js"></script>
-    <script src="image-slider.js"></script>
-    <script src="theme-toggle.js"></script>
-    <script src="navigation.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
