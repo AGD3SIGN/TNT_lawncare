@@ -5,69 +5,467 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Professional lawn care services including mowing,weedeating, mulching, and edging for local homeowners.">
-    <title>TNT Lawn Care</title>
-    <!-- Styles CSS -->
-    <link rel="stylesheet" href="css/styles.css">
+        content="TNT Lawns - Professional lawn care services with explosive results. Locally owned.">
+    <title>TNT Lawns - Lawn care with a BANG!</title>
+    <!-- Favicon -->
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <!-- Remixicon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
     <!-- AOS CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <!-- Remix Icons CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Gudea:ital,wght@0,400;0,700;1,400&family=Moirai+One&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-        rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
-
     <!-- Progress Bar -->
     <div class="progress-container">
         <div class="progress-bar" id="progressBar"></div>
     </div>
 
     <!-- Header & Navigation -->
-    <header>
-        <div class="container">
-            <!-- Logo -->
-            <div class="logo">
-                <a href="#hero">TNT LAWNS</a>
-            </div>
-            <!-- Desktop Nav -->
-            <nav class="desktop-nav">
-                <ul>
-                    <li><a href="#hero" class="nav-link active">Home</a></li>
-                    <li><a href="#services" class="nav-link">Services</a></li>
-                    <li><a href="#about" class="nav-link">About</a></li>
-                    <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
-                    <li><a href="#gallery" class="nav-link">Gallery</a></li>
-                    <li><a href="#contact" class="nav-link">Contact</a></li>
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">
+                <span class="logo-text">TNT</span> Lawns
+            </a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <!-- Home -->
+                    <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
+                    <!-- About -->
+                    <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                    <!-- Services-->
+                    <li class="nav__item"><a href="#services" class="nav__link">Services</a></li>
+                    <!-- Gallery -->
+                    <li class="nav__item"><a href="#gallery" class="nav__link">Gallery</a></li>
+                    <!-- Contact -->
+                    <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
                 </ul>
-                <!-- CTA Button -->
-                <a href="#contact" class="cta-button">Get a Quote!</a>
-            </nav>
-            <!-- Mobile Menu Toggle -->
-            <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
+                <!-- Nav Close -->
+                <div class="nav__close" id="nav-close">
+                    <i class="ri-close-line"></i>
+                </div>
+            </div>
+            <!-- Nav Toggle -->
+            <div class="nav__toggle" id="nav-toggle">
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
     </header>
 
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Hero Section -->
+        <section class="hero section" id="home">
+            <div class="hero__container container grid">
+                <div class="hero__content" data-aos="fade-right">
+                    <h1 class="hero__title">
+                        <span class="hero__title-highlight">TNT</span> Lawns
+                    </h1>
+                    <p class="hero__description">
+                        Explosive Results for Your Lawn
+                    </p>
+                    <div class="hero__buttons">
+                        <a href="#contact" class="button button-primary">Get a Free Quote</a>
+                        <a href="#services" class="button button-secondary">Our Services</a>
+                    </div>
+                </div>
+
+                <div class="hero__visual" data-aos="fade-left">
+                    <div class="hero__image-wrapper">
+                        <img src="assets/mower.jpg"
+                            alt="Professional lawn mowing" class="hero__image">
+                    </div>
+                    <div class="hero__decoration">
+                        <div class="hero__explosion hero__explosion-1"></div>
+                        <div class="hero__explosion hero__explosion-2"></div>
+                        <div class="hero__grass"></div>
+                    </div>
+                    <div class="hero__badge">
+                        <span class="hero__badge-text">Professional Service</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about section" id="about">
+            <div class="about__container container grid">
+                <div class="about__data" data-aos="fade-right">
+                    <h2 class="section__title">About <span about__title-highlight>TNT</span> Lawns</h2>
+                    <p class="about__description">
+                        Hi, I'm Truett, the teenage entrepreneur behind TNT Lawns. What started as a summer in 2023, has
+                        grown
+                        into a passion for creating beautiful, well-maintained lawns throughout our community.
+                    </p>
+                    <p class="about__description">
+                        I believe in reliability, attention to detail, and professional service at a fair price. When
+                        you choose TNT Lawns, you're supporting a local business committed to explosive results for your
+                        property.
+                    </p>
+
+                    <div class="about__stats grid">
+                        <div class="about__stat" data-aos="fade-up" data-aos-delay="100">
+                            <h3 class="about__stat-number" id="counter1">0</h3>
+                            <p class="about__stat-text">Lawns Mowed</p>
+                        </div>
+
+                        <div class="about__stat" data-aos="fade-up" data-aos-delay="200">
+                            <h3 class="about__stat-number" id="counter2">0</h3>
+                            <p class="about__stat-text">Happy Clients</p>
+                        </div>
+
+                        <div class="about__stat" data-aos="fade-up" data-aos-delay="300">
+                            <h3 class="about__stat-number" id="counter3">0</h3>
+                            <p class="about__stat-text">Years Exp.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about__img" data-aos="fade-left">
+                    <img src="https://images.unsplash.com/photo-1589439634245-75cc4e3c6136?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                        alt="Professional lawn mowing service" class="about__image">
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services section" id="services">
+            <h2 class="section__title" data-aos="fade-up">My Services</h2>
+
+            <div class="services__container container grid">
+                <div class="service__card" data-aos="fade-up">
+                    <div class="service__icon">
+                        <i class="ri-scissors-cut-line"></i>
+                    </div>
+                    <h3 class="service__title">Mowing</h3>
+                    <p class="service__description">
+                        Professional cutting with stripe patterns that will make your lawn the envy of the neighborhood.
+                    </p>
+                    <p class="service__price">Starting at $30</p>
+                </div>
+
+                <div class="service__card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service__icon">
+                        <i class="ri-plant-line"></i>
+                    </div>
+                    <h3 class="service__title">Weedeating</h3>
+                    <p class="service__description">
+                        Detailed trimming around edges, obstacles, and hard-to-reach areas for a perfectly manicured
+                        look.
+                    </p>
+                    <p class="service__price">Starting at $15</p>
+                </div>
+
+                <div class="service__card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service__icon">
+                        <i class="ri-leaf-line"></i>
+                    </div>
+                    <h3 class="service__title">Mulching</h3>
+                    <p class="service__description">
+                        Quality mulch application to protect your plants, retain moisture, and enhance your landscape's
+                        appearance.
+                    </p>
+                    <p class="service__price">Starting at $45</p>
+                </div>
+
+                <div class="service__card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service__icon">
+                        <i class="ri-ruler-line"></i>
+                    </div>
+                    <h3 class="service__title">Edging</h3>
+                    <p class="service__description">
+                        Clean, defined edges for lawns and garden beds that provide a professional finishing touch.
+                    </p>
+                    <p class="service__price">Starting at $20</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section class="gallery section" id="gallery">
+            <h2 class="section__title" data-aos="fade-up">My Work</h2>
+
+            <div class="gallery__container container grid">
+                <div class="gallery__item" data-aos="fade-up">
+                    <div class="before-after-slider">
+                        <div class="before-image">
+                            <img src="https://images.unsplash.com/photo-1558904541-efa843a96f01?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                                alt="Before lawn maintenance">
+                            <span class="slider-label">Before</span>
+                        </div>
+                        <div class="after-image">
+                            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                                alt="After lawn maintenance">
+                            <span class="slider-label">After</span>
+                        </div>
+                        <div class="slider-handle">
+                            <i class="ri-arrow-left-right-line"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery__item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="before-after-slider">
+                        <div class="before-image">
+                            <img src="https://images.unsplash.com/photo-1599598177991-ec67b5c37318?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                                alt="Before lawn maintenance">
+                            <span class="slider-label">Before</span>
+                        </div>
+                        <div class="after-image">
+                            <img src="https://images.unsplash.com/photo-1560749003-f4b1e17e2dff?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                                alt="After lawn maintenance">
+                            <span class="slider-label">After</span>
+                        </div>
+                        <div class="slider-handle">
+                            <i class="ri-arrow-left-right-line"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery__item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="before-after-slider">
+                        <div class="before-image">
+                            <img src="https://images.unsplash.com/photo-1592420115840-ade0e7ad9897?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                                alt="Before lawn maintenance">
+                            <span class="slider-label">Before</span>
+                        </div>
+                        <div class="after-image">
+                            <img src="https://images.unsplash.com/photo-1551410224-699683e15636?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                                alt="After lawn maintenance">
+                            <span class="slider-label">After</span>
+                        </div>
+                        <div class="slider-handle">
+                            <i class="ri-arrow-left-right-line"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery__item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="before-after-slider">
+                        <div class="before-image">
+                            <img src="https://images.unsplash.com/photo-1589733955941-5eeaf752f6dd?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                                alt="Before lawn maintenance">
+                            <span class="slider-label">Before</span>
+                        </div>
+                        <div class="after-image">
+                            <img src="https://images.unsplash.com/photo-1558452919-08ae4aea8e29?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                                alt="After lawn maintenance">
+                            <span class="slider-label">After</span>
+                        </div>
+                        <div class="slider-handle">
+                            <i class="ri-arrow-left-right-line"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials section" id="testimonials">
+            <h2 class="section__title" data-aos="fade-up">What Clients Say</h2>
+
+            <div class="testimonials__container container" data-aos="fade-up">
+                <div class="testimonial__wrapper" id="testimonialWrapper">
+                    <div class="testimonial__card">
+                        <div class="testimonial__rating">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                        </div>
+                        <p class="testimonial__text">
+                            "Tyler does an amazing job with our lawn. Always on time, professional, and the results are
+                            truly explosive! Our yard has never looked better."
+                        </p>
+                        <div class="testimonial__client">
+                            <h3 class="testimonial__name">Sarah Johnson</h3>
+                            <p class="testimonial__location">Meadowbrook</p>
+                        </div>
+                    </div>
+
+                    <div class="testimonial__card">
+                        <div class="testimonial__rating">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                        </div>
+                        <p class="testimonial__text">
+                            "I've tried several lawn services, but TNT Lawns stands out. The attention to detail is
+                            impressive, and the pricing is fair. Highly recommend!"
+                        </p>
+                        <div class="testimonial__client">
+                            <h3 class="testimonial__name">Michael Rodriguez</h3>
+                            <p class="testimonial__location">Oakridge</p>
+                        </div>
+                    </div>
+
+                    <div class="testimonial__card">
+                        <div class="testimonial__rating">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-half-fill"></i>
+                        </div>
+                        <p class="testimonial__text">
+                            "Tyler is reliable, professional, and does excellent work. As a busy professional, I
+                            appreciate having someone I can trust with my lawn care needs."
+                        </p>
+                        <div class="testimonial__client">
+                            <h3 class="testimonial__name">Jennifer Williams</h3>
+                            <p class="testimonial__location">Pine Hills</p>
+                        </div>
+                    </div>
+
+                    <div class="testimonial__card">
+                        <div class="testimonial__rating">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                        </div>
+                        <p class="testimonial__text">
+                            "The before and after difference is incredible! TNT Lawns transformed our overgrown yard
+                            into a beautiful space we're proud to show off to neighbors."
+                        </p>
+                        <div class="testimonial__client">
+                            <h3 class="testimonial__name">David Thompson</h3>
+                            <p class="testimonial__location">Riverside</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial__navigation">
+                    <div class="testimonial__nav-btn prev" id="prevTestimonial">
+                        <i class="ri-arrow-left-s-line"></i>
+                    </div>
+                    <div class="testimonial__nav-btn next" id="nextTestimonial">
+                        <i class="ri-arrow-right-s-line"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact section" id="contact">
+            <h2 class="section__title" data-aos="fade-up">Get In Touch</h2>
+
+            <div class="contact__container container grid">
+                <div class="contact__data" data-aos="fade-right">
+                    <div class="contact__info">
+                        <div class="contact__card">
+                            <i class="ri-phone-line contact__card-icon"></i>
+                            <h3 class="contact__card-title">Call Us</h3>
+                            <p class="contact__card-data">(555) 123-4567</p>
+                        </div>
+
+                        <div class="contact__card">
+                            <i class="ri-mail-line contact__card-icon"></i>
+                            <h3 class="contact__card-title">Email</h3>
+                            <p class="contact__card-data">info@tntlawns.com</p>
+                        </div>
+
+                        <div class="contact__card">
+                            <i class="ri-time-line contact__card-icon"></i>
+                            <h3 class="contact__card-title">Hours</h3>
+                            <p class="contact__card-data">Mon-Sat: 8AM - 7PM</p>
+                        </div>
+                    </div>
+
+                    <div class="contact__social">
+                        <a href="#" class="contact__social-link">
+                            <i class="ri-facebook-fill"></i>
+                        </a>
+                        <a href="#" class="contact__social-link">
+                            <i class="ri-instagram-line"></i>
+                        </a>
+                        <a href="#" class="contact__social-link">
+                            <i class="ri-nextdoor-line"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contact__map" data-aos="fade-left">
+                    <div class="map-container">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50000.00000000001!2d-97.7430608!3d30.267153!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8644b599a0cc032f%3A0x5d9b464bd469d57a!2sAustin%2C%20TX!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus"
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div class="service-area">
+                        <h3>Service Area</h3>
+                        <p>We proudly serve all neighborhoods within a 15-mile radius of downtown.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__container container">
+            <div class="footer__content">
+                <a href="#" class="footer__logo">
+                    <span class="logo-text">TNT</span> Lawns
+                </a>
+
+                <p class="footer__description">
+                    Explosive Results for Your Lawn
+                </p>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">Services</h3>
+
+                <ul class="footer__links">
+                    <li><a href="#services" class="footer__link">Mowing</a></li>
+                    <li><a href="#services" class="footer__link">Weedeating</a></li>
+                    <li><a href="#services" class="footer__link">Mulching</a></li>
+                    <li><a href="#services" class="footer__link">Edging</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">Company</h3>
+
+                <ul class="footer__links">
+                    <li><a href="#about" class="footer__link">About</a></li>
+                    <li><a href="#gallery" class="footer__link">Gallery</a></li>
+                    <li><a href="#testimonials" class="footer__link">Testimonials</a></li>
+                    <li><a href="#contact" class="footer__link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer__copy">
+            <p>&copy; 2025 TNT Lawns. All rights reserved.</p>
+        </div>
+    </footer>
+    </main>
 
 
+    <!-- Scroll to top button -->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="ri-arrow-up-line scrollup__icon"></i>
+    </a>
 
-
-
-
-
-
-
-    <!-- Scripts -->
+    <!-- AOS JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Main JS -->
     <script src="js/main.js"></script>
+    <script src="js/before-after.js"></script>
 </body>
 
 </html>

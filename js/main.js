@@ -1,274 +1,153 @@
-// Main JavaScript file - All functionality consolidated
-document.addEventListener('DOMContentLoaded', function () {
-    // Initialize all components
-    initNavigation();
-    initProgressBar();
-    initScrollTop();
-    initAnimations();
-    initImageSliders();
-    initTestimonials();
-});
+/*=============== SHOW MENU ===============*/
+const navMenu = document.getElementById('nav-menu'),
+    navToggle = document.getElementById('nav-toggle'),
+    navClose = document.getElementById('nav-close'),
+    hamburger = document.querySelector('.hamburger');
 
-// Initialize navigation functionality
-function initNavigation() {
-    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-    const closeMenuBtn = document.querySelector('.close-menu');
-    const mobileNavOverlay = document.querySelector('.mobile-nav-overlay');
-    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
-    const navLinks = document.querySelectorAll('.nav-link');
-    const sections = document.querySelectorAll('section');
-
-    // Toggle mobile menu
-    mobileMenuToggle.addEventListener('click', function () {
-        mobileNavOverlay.classList.add('active');
-        document.body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
+/*===== MENU SHOW =====*/
+/* Validate if constant exists */
+if (navToggle) {
+    navToggle.addEventListener('click', () => {
+        navMenu.classList.add('show-menu');
+        hamburger.classList.add('active');
     });
-
-    // Close mobile menu
-    closeMenuBtn.addEventListener('click', function () {
-        mobileNavOverlay.classList.remove('active');
-        document.body.style.overflow = ''; // Re-enable scrolling
-    });
-
-    // Close mobile menu when a link is clicked
-    mobileNavLinks.forEach(link => {
-        link.addEventListener('click', function () {
-            mobileNavOverlay.classList.remove('active');
-            document.body.style.overflow = ''; // Re-enable scrolling
-        });
-    });
-
-    // Smooth scroll for navigation links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-
-            const targetId = this.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
-
-            if (targetElement) {
-                // Get header height for offset
-                const headerHeight = document.querySelector('header').offsetHeight;
-                const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
-
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
-
-    // Highlight active navigation link based on scroll position
-    function setActiveNavLink() {
-        const scrollPosition = window.scrollY;
-
-        // Get header height for offset
-        const headerHeight = document.querySelector('header').offsetHeight;
-
-        // Check each section's position
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop - headerHeight - 100; // Add some buffer
-            const sectionBottom = sectionTop + section.offsetHeight;
-
-            if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
-                // Remove active class from all links
-                navLinks.forEach(link => {
-                    link.classList.remove('active');
-                });
-
-                // Add active class to corresponding link
-                const correspondingLink = document.querySelector(`.nav-link[href="#${section.id}"]`);
-                if (correspondingLink) {
-                    correspondingLink.classList.add('active');
-                }
-            }
-        });
-    }
-
-    // Add scroll event listener for active link highlighting
-    window.addEventListener('scroll', setActiveNavLink);
-
-    // Set active link on page load
-    setActiveNavLink();
 }
 
-// Initialize progress bar
-function initProgressBar() {
-    const progressBar = document.getElementById('progressBar');
-
-    // Update progress bar width based on scroll position
-    function updateProgressBar() {
-        const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-        const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        const scrollPercentage = (scrollTop / scrollHeight) * 100;
-
-        progressBar.style.width = scrollPercentage + '%';
-    }
-
-    // Add scroll event listener
-    window.addEventListener('scroll', updateProgressBar);
-
-    // Initialize progress bar on page load
-    updateProgressBar();
+/*===== MENU HIDDEN =====*/
+/* Validate if constant exists */
+if (navClose) {
+    navClose.addEventListener('click', () => {
+        navMenu.classList.remove('show-menu');
+        hamburger.classList.remove('active');
+    });
 }
 
-// Initialize scroll to top button
-function initScrollTop() {
-    const scrollTopBtn = document.getElementById('scrollTopBtn');
+/*=============== REMOVE MENU MOBILE ===============*/
+const navLink = document.querySelectorAll('.nav__link');
 
-    // Show/hide scroll to top button based on scroll position
-    function toggleScrollTopBtn() {
-        if (document.documentElement.scrollTop > 300) {
-            scrollTopBtn.classList.add('visible');
+function linkAction() {
+    const navMenu = document.getElementById('nav-menu');
+    // When we click on each nav__link, we remove the show-menu class
+    navMenu.classList.remove('show-menu');
+    hamburger.classList.remove('active');
+}
+navLink.forEach(n => n.addEventListener('click', linkAction));
+
+/*=============== CHANGE BACKGROUND HEADER ===============*/
+function scrollHeader() {
+    const header = document.getElementById('header');
+    // When the scroll is greater than 50 viewport height, add the scroll-header class to the header tag
+    if (this.scrollY >= 50) header.classList.add('scroll-header'); else header.classList.remove('scroll-header');
+}
+window.addEventListener('scroll', scrollHeader);
+
+/*=============== PROGRESS BAR ===============*/
+function updateProgressBar() {
+    const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+    const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrollPercentage = (scrollTop / scrollHeight) * 100;
+
+    document.getElementById('progressBar').style.width = scrollPercentage + '%';
+}
+
+window.addEventListener('scroll', updateProgressBar);
+
+/*=============== SHOW SCROLL UP ===============*/
+function scrollUp() {
+    const scrollUp = document.getElementById('scroll-up');
+    // When the scroll is higher than 200 viewport height, add the show-scroll class to the a tag with the scroll-up class
+    if (this.scrollY >= 200) scrollUp.classList.add('show-scroll'); else scrollUp.classList.remove('show-scroll');
+}
+window.addEventListener('scroll', scrollUp);
+
+/*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
+const sections = document.querySelectorAll('section[id]');
+
+function scrollActive() {
+    const scrollY = window.pageYOffset;
+
+    sections.forEach(current => {
+        const sectionHeight = current.offsetHeight;
+        const sectionTop = current.offsetTop - 50;
+        const sectionId = current.getAttribute('id');
+
+        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+            document.querySelector('.nav__link[href*=' + sectionId + ']').classList.add('active-link');
         } else {
-            scrollTopBtn.classList.remove('visible');
-        }
-    }
-
-    // Scroll to top when button is clicked
-    scrollTopBtn.addEventListener('click', function () {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    });
-
-    // Add scroll event listener
-    window.addEventListener('scroll', toggleScrollTopBtn);
-
-    // Initialize button state on page load
-    toggleScrollTopBtn();
-}
-
-// Initialize AOS animations
-function initAnimations() {
-    // Initialize AOS (Animate On Scroll)
-    if (typeof AOS !== 'undefined') {
-        AOS.init({
-            duration: 800,
-            easing: 'ease-in-out',
-            once: true,
-            mirror: false,
-            disable: window.matchMedia('(prefers-reduced-motion: reduce)').matches
-        });
-
-        // Refresh AOS when window is resized
-        window.addEventListener('resize', function () {
-            AOS.refresh();
-        });
-    }
-}
-
-// Initialize image comparison sliders
-function initImageSliders() {
-    const sliders = document.querySelectorAll('.comparison-slider');
-
-    sliders.forEach(slider => {
-        const beforeImage = slider.querySelector('.before-image');
-        const sliderHandle = slider.querySelector('.slider-handle');
-        let isDragging = false;
-
-        // Set initial position
-        positionElements(slider, 50);
-
-        // Add mouse and touch event listeners
-        sliderHandle.addEventListener('mousedown', startDrag);
-        sliderHandle.addEventListener('touchstart', startDrag, { passive: true });
-
-        window.addEventListener('mousemove', drag);
-        window.addEventListener('touchmove', drag, { passive: false });
-
-        window.addEventListener('mouseup', endDrag);
-        window.addEventListener('touchend', endDrag);
-
-        // Click anywhere on slider to move handle
-        slider.addEventListener('click', function (e) {
-            if (e.target !== sliderHandle && !sliderHandle.contains(e.target)) {
-                const sliderRect = slider.getBoundingClientRect();
-                const position = ((e.clientX - sliderRect.left) / sliderRect.width) * 100;
-                positionElements(slider, position);
-            }
-        });
-
-        // Functions for drag behavior
-        function startDrag(e) {
-            isDragging = true;
-            slider.classList.add('dragging');
-            e.preventDefault();
-        }
-
-        function drag(e) {
-            if (!isDragging) return;
-
-            // Prevent default to stop scrolling on touch devices
-            if (e.type === 'touchmove') {
-                e.preventDefault();
-            }
-
-            const sliderRect = slider.getBoundingClientRect();
-            const clientX = e.clientX || e.touches[0].clientX;
-            let position = ((clientX - sliderRect.left) / sliderRect.width) * 100;
-
-            // Constrain position between 0 and 100
-            position = Math.max(0, Math.min(position, 100));
-
-            positionElements(slider, position);
-        }
-
-        function endDrag() {
-            isDragging = false;
-            slider.classList.remove('dragging');
-        }
-
-        function positionElements(slider, position) {
-            const beforeImage = slider.querySelector('.before-image');
-            const sliderHandle = slider.querySelector('.slider-handle');
-
-            // Update positions
-            beforeImage.style.width = `${position}%`;
-            sliderHandle.style.left = `${position}%`;
+            document.querySelector('.nav__link[href*=' + sectionId + ']').classList.remove('active-link');
         }
     });
 }
+window.addEventListener('scroll', scrollActive);
 
-// Initialize testimonials carousel
-function initTestimonials() {
-    const testimonials = document.querySelectorAll('.testimonial');
-    const dots = document.querySelectorAll('.dot');
+/*=============== SCROLL REVEAL ANIMATION ===============*/
+document.addEventListener('DOMContentLoaded', function () {
+    // Initialize AOS
+    AOS.init({
+        duration: 1000,
+        easing: 'ease-in-out',
+        once: true,
+        mirror: false
+    });
+
+    // Counter animation
+    const counters = document.querySelectorAll('.about__stat-number');
+    const counterValues = [250, 120, 2]; // Values for each counter
+
+    counters.forEach((counter, index) => {
+        let startValue = 0;
+        let endValue = counterValues[index];
+        let duration = 2000;
+        let counter_interval = Math.floor(duration / endValue);
+
+        let counting = setInterval(() => {
+            startValue += 1;
+            counter.textContent = startValue;
+
+            if (startValue === endValue) {
+                clearInterval(counting);
+            }
+        }, counter_interval);
+    });
+
+    // Testimonial Slider
+    const testimonialWrapper = document.getElementById('testimonialWrapper');
+    const testimonialCards = document.querySelectorAll('.testimonial__card');
+    const prevBtn = document.getElementById('prevTestimonial');
+    const nextBtn = document.getElementById('nextTestimonial');
+
     let currentIndex = 0;
+    const cardWidth = testimonialCards[0].offsetWidth + parseInt(window.getComputedStyle(testimonialCards[0]).marginRight) * 2;
 
-    // Hide all testimonials except the first one
-    testimonials.forEach((testimonial, index) => {
-        if (index !== 0) {
-            testimonial.style.display = 'none';
-        }
-    });
-
-    // Add click event to dots
-    dots.forEach((dot, index) => {
-        dot.addEventListener('click', () => {
-            showTestimonial(index);
-        });
-    });
-
-    // Function to show testimonial by index
-    function showTestimonial(index) {
-        // Hide current testimonial
-        testimonials[currentIndex].style.display = 'none';
-        dots[currentIndex].classList.remove('active');
-
-        // Show selected testimonial
-        testimonials[index].style.display = 'block';
-        dots[index].classList.add('active');
-
-        // Update current index
-        currentIndex = index;
+    function updateSlider() {
+        testimonialWrapper.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
     }
 
-    // Auto-rotate testimonials every 5 seconds
-    setInterval(() => {
-        const nextIndex = (currentIndex + 1) % testimonials.length;
-        showTestimonial(nextIndex);
+    prevBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex > 0) ? currentIndex - 1 : testimonialCards.length - 1;
+        updateSlider();
+    });
+
+    nextBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex < testimonialCards.length - 1) ? currentIndex + 1 : 0;
+        updateSlider();
+    });
+
+    // Auto slide
+    let autoSlide = setInterval(() => {
+        currentIndex = (currentIndex < testimonialCards.length - 1) ? currentIndex + 1 : 0;
+        updateSlider();
     }, 5000);
-}
+
+    // Pause auto slide on hover
+    testimonialWrapper.addEventListener('mouseenter', () => {
+        clearInterval(autoSlide);
+    });
+
+    testimonialWrapper.addEventListener('mouseleave', () => {
+        autoSlide = setInterval(() => {
+            currentIndex = (currentIndex < testimonialCards.length - 1) ? currentIndex + 1 : 0;
+            updateSlider();
+        }, 5000);
+    });
+});
