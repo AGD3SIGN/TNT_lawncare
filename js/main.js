@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Counter animation
     const counters = document.querySelectorAll('.about__stat-number');
-    const counterValues = [250, 120, 2]; // Values for each counter
+    const counterValues = [200, 15, 2]; // Values for each counter
 
     counters.forEach((counter, index) => {
         let startValue = 0;

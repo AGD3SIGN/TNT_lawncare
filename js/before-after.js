@@ -26,11 +26,15 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         function startResizeTouch(e) {
+            e.preventDefault(); // Prevent default to stop page scrolling
             isResizing = true;
         }
 
         function resize(e) {
             if (!isResizing) return;
+
+            // Prevent default behavior to avoid page scrolling
+            e.preventDefault();
 
             const sliderRect = slider.getBoundingClientRect();
             const position = (e.clientX - sliderRect.left) / sliderRect.width * 100;
@@ -44,6 +48,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
         function resizeTouch(e) {
             if (!isResizing) return;
+
+            // Prevent default behavior to avoid page scrolling
+            e.preventDefault();
 
             const touch = e.touches[0];
             const sliderRect = slider.getBoundingClientRect();
