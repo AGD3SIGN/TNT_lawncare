@@ -136,7 +136,7 @@ Reusable CSS
 .section__title {
     font-size: var(--h2-font-size);
     font-family: 'Open Sans', sans-serif;
-    text-transform: uppercase ;
+    text-transform: uppercase;
     color: var(--clr-primary-a0);
     text-align: center;
     margin-bottom: 2.5rem;
@@ -198,6 +198,10 @@ Reusable CSS
     width: 100%;
 }
 
+span.highlight {
+    color: var(--clr-primary-a0);
+}
+
 /* ====================
 Progress Bar
 ==================== */
@@ -226,13 +230,14 @@ Header & Nav
     top: 0;
     left: 0;
     width: 100%;
-    background-color: var(--clr-surface-a0);
+    background-color: transparent;
     z-index: var(--z-fixed);
-    transition: 0.4s;
+    transition: 0.2s;
 }
 
 .header.scroll-header {
-    box-shadow: 0 1px 15px hsla(90, 78%, 96%, 0.1);
+    background-color: var(--clr-surface-a0);
+    box-shadow: 0 1px 15px hsla(0, 0%, 27%, 0.1);
 }
 
 .nav {
@@ -245,14 +250,9 @@ Header & Nav
 .nav__logo {
     display: flex;
     align-items: center;
-    column-gap: 0.5rem;
-    font-size: 1.25rem;
-    font-weight: var(--font-bold);
-    color: var(--clr-light-a0);
-}
-
-.logo-text {
-    color: var(--clr-primary-a0);
+    margin-left: .5rem;
+    width: 35px;
+    height: 35px;
 }
 
 .nav__menu {
@@ -386,7 +386,7 @@ Hero Section
 .hero__title {
     font-size: var(--biggest-font-size);
     color: var(--clr-light-a0);
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     line-height: 1.1;
 }
 
@@ -396,8 +396,13 @@ Hero Section
     position: relative;
 }
 
+.hero__subtitle {
+    color: var(--clr-light-a0);
+    margin-bottom: 1rem;
+}
+
 .hero__description {
-    font-size: var(--h2-font-size);
+    font-size: var(--small-font-size);
     color: var(--clr-light-a0);
     margin-bottom: 1.5rem;
     max-width: 500px;
@@ -541,6 +546,11 @@ About Section
 
 .about__description {
     margin-bottom: 2rem;
+}
+
+.about__tagline {
+    font-weight: var(--font-bold);
+    color: var(--clr-primary-a0);
 }
 
 .about__stats {
@@ -958,6 +968,8 @@ Footer Section
 .footer__container {
     display: grid;
     row-gap: 3rem;
+    /* place-content: center; */
+    
 }
 
 .footer__logo {
@@ -1035,11 +1047,24 @@ Scroll Up Button
 BREAKPOINTS
 ==================== */
 /* Small Devices */
-@media screen and (max-width: 340px) {
+@media screen and (max-width: 460px) {
     .container {
         margin-left: 1rem;
         margin-right: 1rem;
     }
+
+    .hero__title {
+        font-size: 3.5rem;
+    }
+
+    .hero__subtitle {
+        font-size: var(--h3-font-size);
+    }
+
+    .hero__description {
+        font-size: 1rem;
+    }
+
 
     .hero__buttons {
         flex-direction: column;
@@ -1066,6 +1091,13 @@ BREAKPOINTS
 @media screen and (min-width: 767px) {
     .footer__container {
         grid-template-columns: repeat(3, 1fr);
+    }
+
+    .hero__title {
+        font-size: 3.5rem;
+        color: var(--clr-light-a0);
+        margin-bottom: 1rem;
+        line-height: 1.1;
     }
 
     .service-area {
@@ -1102,7 +1134,7 @@ BREAKPOINTS
     }
 
     .hero__description {
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
 
     .nav {
