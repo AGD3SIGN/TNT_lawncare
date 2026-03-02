@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Gudea:ital,wght@0,400;0,700;1,400&family=Moirai+One&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 /* ====================
-Variable CSS 
+Variable CSS
 ==================== */
 :root {
     --header-height: 3.5rem;
@@ -361,7 +361,7 @@ Header & Nav
 
 
 /* ====================
-Hero Section 
+Hero Section
 ==================== */
 .hero {
     padding-top: calc(var(--header-height) + 2rem);
@@ -534,7 +534,7 @@ Hero Section
 }
 
 /* ====================
-About Section 
+About Section
 ==================== */
 .about__container {
     row-gap: 3rem;
@@ -584,7 +584,7 @@ About Section
 
 
 /* ====================
-Services Section 
+Services Section
 ==================== */
 .services__container {
     grid-template-columns: repeat(1, 1fr);
@@ -673,7 +673,7 @@ Services Section
 }
 
 /* ====================
-Gallery Section 
+Gallery Section
 ==================== */
 .gallery__container {
     grid-template-columns: repeat(1, 1fr);
@@ -770,7 +770,7 @@ Gallery Section
 }
 
 /* ====================
-Testimonials Section 
+Testimonials Section
 ==================== */
 .testimonials__container {
     position: relative;
@@ -851,7 +851,7 @@ Testimonials Section
 }
 
 /* ====================
-Contact Section 
+Contact Section
 ==================== */
 .contact__container {
     row-gap: 3.5rem;
@@ -957,7 +957,7 @@ Contact Section
 }
 
 /* ====================
-Footer Section 
+Footer Section
 ==================== */
 .footer {
     background-color: var(--clr-surface-a0);
@@ -969,7 +969,7 @@ Footer Section
     display: grid;
     row-gap: 3rem;
     /* place-content: center; */
-    
+
 }
 
 .footer__logo {
