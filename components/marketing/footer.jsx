@@ -1,10 +1,10 @@
 import { Phone, Mail, MapPin } from "lucide-react"
 
 const serviceAreas = [
-  "Downtown",
-  "Oakwood Heights",
-  "Maple Grove",
-  "Pine Valley",
+  "Benton",
+  "Bryant",
+  "Shannon Hills",
+  "Bauxite",
 ]
 
 export function Footer() {
@@ -20,11 +20,10 @@ export function Footer() {
               href="#"
               className="text-2xl font-bold tracking-tight text-white"
             >
-              GreenEdge
+              TNT Lawns
             </a>
             <p className="mt-4 text-white/70 text-sm leading-relaxed">
-              Professional lawn care services for homeowners who value quality 
-              and reliability.
+              Lawn Care with a BANG! Serving Benton, Arkansas and surrounding areas.
             </p>
           </div>
 
@@ -34,26 +33,26 @@ export function Footer() {
             <ul className="space-y-3">
               <li>
                 <a
-                  href="tel:5555555555"
+                  href="tel:5019461922"
                   className="flex items-center gap-2 text-white/70 hover:text-white transition-colors text-sm"
                 >
                   <Phone className="h-4 w-4" />
-                  (555) 555-5555
+                  (501) 946-1922
                 </a>
               </li>
               <li>
                 <a
-                  href="mailto:info@greenedge.com"
+                  href="mailto:tntlawns23@gmail.com"
                   className="flex items-center gap-2 text-white/70 hover:text-white transition-colors text-sm"
                 >
                   <Mail className="h-4 w-4" />
-                  info@greenedge.com
+                  tntlawns23@gmail.com
                 </a>
               </li>
               <li>
                 <span className="flex items-center gap-2 text-white/70 text-sm">
                   <MapPin className="h-4 w-4" />
-                  Local Town, State
+                  Benton, Arkansas
                 </span>
               </li>
             </ul>
@@ -113,7 +112,7 @@ export function Footer() {
 
         <div className="mt-12 pt-8 border-t border-white/10 text-center">
           <p className="text-white/50 text-sm">
-            © {currentYear} GreenEdge Lawn Care. All rights reserved.
+            © {currentYear} TNT Lawns. All rights reserved. | Developed by <a href="https://www.brandonjosephtorres.com" className="hover:text-white transition-colors">Brandon Torres</a>
           </p>
         </div>
       </div>

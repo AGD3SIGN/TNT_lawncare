@@ -3,10 +3,10 @@ import { motion, useInView } from "framer-motion"
 import { useRef, useEffect, useState } from "react"
 
 const stats = [
-  { value: 150, suffix: "+", label: "Lawns Serviced" },
-  { value: 98, suffix: "%", label: "Customer Satisfaction" },
-  { value: 3, suffix: "+", label: "Years Experience" },
-  { value: 500, suffix: "+", label: "Hours of Work" },
+  { value: 200, suffix: "+", label: "Lawns Mowed" },
+  { value: 15, suffix: "+", label: "Happy Clients" },
+  { value: 2, suffix: "+", label: "Years Experience" },
+  { value: 100, suffix: "%", label: "Show Up Rate" },
 ]
 
 function AnimatedCounter({ value, suffix, duration = 2000 }) {
@@ -70,8 +70,8 @@ export function About() {
             {/* Main Image */}
             <div className="relative aspect-[4/5] max-w-md mx-auto lg:mx-0 rounded-2xl overflow-hidden shadow-xl">
               <img
-                src="/images/about-owner.jpg"
-                alt="GreenEdge Lawn Care owner"
+                src="/assets/About_Serious.png"
+                alt="Truett, owner of TNT Lawns"
                 style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }}
               />
               {/* Gradient overlay at bottom */}
@@ -121,19 +121,19 @@ export function About() {
               className="text-3xl sm:text-4xl font-bold text-foreground tracking-tight text-balance"
               style={{ fontSize: "clamp(1.875rem, 4vw, 2.5rem)" }}
             >
-              Young, Reliable, and Serious About Quality
+              One Teen. One Mower. Explosive Results.
             </h2>
             <div className="mt-6 space-y-4 text-muted-foreground leading-relaxed">
               <p>
-                Being young doesn't mean cutting corners—it means bringing energy,
-                dedication, and a fresh perspective to every lawn I care for. I started
-                this business because I believe in earning trust through hard work and
-                consistent results.
+                Hey! I'm Truett — the teen behind TNT Lawns. I started this business in 2023
+                with a push mower and a few neighborhood lawns, and it's been growing ever since.
+                I might still be in Junior High, but I take my work seriously: showing up clean,
+                doing solid work, and making every yard look its best.
               </p>
               <p>
-                When you hire me, you're not just getting lawn care. You're supporting
-                a local young entrepreneur who takes personal pride in making your
-                property look its best. I treat every yard as if it were my own.
+                When I'm not out mowing, I'm probably drumming, gaming, reading, or messing
+                around with the latest technology. If you're looking for reliable lawn care
+                with a bit of energy — you're in the right place.
               </p>
             </div>
 

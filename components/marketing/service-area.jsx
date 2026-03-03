@@ -4,14 +4,14 @@ import { useRef } from "react"
 import { MapPin } from "lucide-react"
 
 const areas = [
-  "Downtown",
-  "Oakwood Heights",
-  "Maple Grove",
-  "Pine Valley",
-  "Riverside",
-  "Cedar Hills",
-  "Willow Creek",
-  "Sunset Ridge",
+  "Benton",
+  "Bryant",
+  "Shannon Hills",
+  "Bauxite",
+  "Alexander",
+  "Mabelvale",
+  "Hot Springs",
+  "Little Rock",
 ]
 
 export function ServiceArea() {
@@ -41,8 +41,8 @@ export function ServiceArea() {
             Proudly Serving Our Local Community
           </h2>
           <p className="mt-4 text-muted-foreground max-w-xl mx-auto">
-            Based in Local Town, I provide lawn care services throughout the surrounding 
-            neighborhoods. Not sure if you're in my service area? Just ask!
+            Based in Benton, Arkansas, I provide lawn care services within a 30-mile radius.
+            Not sure if you're in my service area? Just ask!
           </p>
 
           <div className="mt-10 flex flex-wrap justify-center gap-3">

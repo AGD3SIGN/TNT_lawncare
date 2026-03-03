@@ -2,38 +2,36 @@
 import { motion } from "framer-motion"
 import { useInView } from "framer-motion"
 import { useRef } from "react"
-import { Scissors, TreeDeciduous, Leaf, Sprout, Wind } from "lucide-react"
+import { Scissors, Sprout, Leaf, Ruler } from "lucide-react"
 
 const services = [
   {
     icon: Scissors,
-    title: "Lawn Mowing",
+    title: "Mowing",
     description:
-      "Professional, consistent cuts that keep your lawn healthy and looking sharp all season long.",
-  },
-  {
-    icon: TreeDeciduous,
-    title: "Edging & Trimming",
-    description:
-      "Clean, precise edges along driveways, walkways, and flower beds for that polished look.",
-  },
-  {
-    icon: Leaf,
-    title: "Seasonal Cleanup",
-    description:
-      "Spring and fall cleanup services to prepare your yard for the changing seasons.",
+      "Expert lawn cutting that leaves your yard looking sharp, clean, and ready to impress the whole neighborhood.",
+    price: "Starting at $25",
   },
   {
     icon: Sprout,
-    title: "Weed Control",
+    title: "Weedeating",
     description:
-      "Keep your lawn pristine with targeted weed removal and prevention treatments.",
+      "Detailed trimming that keeps edges crisp and every corner looking clean — the finishing touch your yard deserves.",
+    price: "Starting at $10",
   },
   {
-    icon: Wind,
-    title: "Leaf Removal",
+    icon: Leaf,
+    title: "Mulching",
     description:
-      "Thorough leaf removal to protect your lawn and maintain your property's curb appeal.",
+      "Thorough leaf mulching that clears your yard of debris and leaves it looking neat, clean, and ready for the season.",
+    price: "Starting at $25",
+  },
+  {
+    icon: Ruler,
+    title: "Edging",
+    description:
+      "Clean, defined edges for lawns and garden beds that provide a professional, crisp finish.",
+    price: "Starting at $15",
   },
 ]
 
@@ -59,6 +57,7 @@ function ServiceCard({ service, index }) {
       <p className="text-muted-foreground text-sm leading-relaxed">
         {service.description}
       </p>
+      <p className="mt-3 text-sm font-semibold text-primary">{service.price}</p>
     </motion.div>
   )
 }
@@ -89,7 +88,7 @@ export function Services() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((service, index) => (
             <ServiceCard key={service.title} service={service} index={index} />
           ))}

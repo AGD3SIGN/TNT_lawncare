@@ -41,7 +41,7 @@ export function Hero() {
             className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight tracking-tight text-balance"
             style={{ fontSize: "clamp(2.25rem, 5vw, 3.75rem)" }}
           >
-            Reliable Lawn Care From a Local Young Professional
+            Lawn Care with a BANG!
           </motion.h1>
 
           <motion.p
@@ -50,8 +50,7 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
             className="mt-6 text-lg sm:text-xl text-white/85 leading-relaxed max-w-xl text-pretty"
           >
-            Experience the difference of working with someone who takes pride in every yard. 
-            Consistent service, attention to detail, and a commitment to making your lawn look its best.
+            TNT Lawns is run by Truett — a local teenager who shows up, works hard, and gets the job done right. From mowing to trimming and cleanup, every yard is treated with focus and care.
           </motion.p>
 
           <motion.div
@@ -73,7 +72,7 @@ export function Hero() {
               size="lg"
               className="border-white/30 bg-white/10 hover:bg-white/20 text-white font-medium text-base px-8 h-12"
             >
-              <a href="tel:5555555555" className="flex items-center gap-2">
+              <a href="tel:5019461922" className="flex items-center gap-2">
                 <Phone className="h-4 w-4" />
                 Call or Text
               </a>

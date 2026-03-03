@@ -10,11 +10,10 @@ import { Spinner } from "@/components/ui/spinner"
 import { cn } from "@/lib/utils"
 
 const serviceOptions = [
-  "Lawn Mowing",
-  "Edging & Trimming",
-  "Seasonal Cleanup",
-  "Weed Control",
-  "Leaf Removal",
+  "Mowing",
+  "Weedeating",
+  "Mulching",
+  "Edging",
   "Multiple Services",
 ]
 
@@ -117,28 +116,28 @@ export function ContactForm() {
               </h3>
               <div className="space-y-4">
                 <a
-                  href="tel:5555555555"
+                  href="tel:5019461922"
                   className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors"
                 >
                   <div className="w-10 h-10 rounded-lg bg-accent flex items-center justify-center text-primary">
                     <Phone className="h-5 w-5" />
                   </div>
-                  <span>(555) 555-5555</span>
+                  <span>(501) 946-1922</span>
                 </a>
                 <a
-                  href="mailto:info@greenedge.com"
+                  href="mailto:tntlawns23@gmail.com"
                   className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors"
                 >
                   <div className="w-10 h-10 rounded-lg bg-accent flex items-center justify-center text-primary">
                     <Mail className="h-5 w-5" />
                   </div>
-                  <span>info@greenedge.com</span>
+                  <span>tntlawns23@gmail.com</span>
                 </a>
                 <div className="flex items-center gap-3 text-muted-foreground">
                   <div className="w-10 h-10 rounded-lg bg-accent flex items-center justify-center text-primary">
                     <MapPin className="h-5 w-5" />
                   </div>
-                  <span>Local Town, State</span>
+                  <span>Benton, Arkansas</span>
                 </div>
               </div>
             </div>

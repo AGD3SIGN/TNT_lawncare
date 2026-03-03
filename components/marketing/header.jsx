@@ -59,7 +59,7 @@ export function Header() {
                 isScrolled ? "text-primary" : "text-primary-foreground"
               )}
             >
-              GreenEdge
+              TNT Lawns
             </a>
 
             {/* Desktop Navigation */}
@@ -134,7 +134,7 @@ export function Header() {
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="text-xl font-bold tracking-tight text-white"
                 >
-                  GreenEdge
+                  TNT Lawns
                 </a>
                 <div className="flex items-center gap-3">
                   <Button
@@ -184,14 +184,14 @@ export function Header() {
 
                 {/* Phone number */}
                 <motion.a
-                  href="tel:5555555555"
+                  href="tel:5019461922"
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.3, delay: 0.35 }}
                   className="flex items-center gap-3 mt-8 text-lg font-medium text-white/90 hover:text-white transition-colors"
                 >
                   <Phone className="h-5 w-5" />
-                  (555) 555-5555
+                  (501) 946-1922
                 </motion.a>
               </motion.nav>
             </div>

@@ -9,21 +9,21 @@ const testimonials = [
     quote:
       "Finally found someone reliable! My lawn has never looked better, and he shows up exactly when he says he will.",
     name: "Sarah M.",
-    location: "Oakwood Heights",
+    location: "Benton, AR",
   },
   {
     rating: 5,
     quote:
       "Impressive work ethic for such a young person. Polite, professional, and does excellent work. Highly recommend!",
     name: "Robert K.",
-    location: "Maple Grove",
+    location: "Bryant, AR",
   },
   {
     rating: 5,
     quote:
       "It's refreshing to work with someone who actually cares about doing a good job. Our neighbors keep asking who does our lawn.",
     name: "Jennifer L.",
-    location: "Pine Valley",
+    location: "Shannon Hills, AR",
   },
 ]
 
